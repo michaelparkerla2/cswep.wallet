@@ -5,14 +5,14 @@ import "./index.css";
 
 import { WagmiConfig, createConfig, configureChains } from "wagmi";
 import { mainnet } from "wagmi/chains";
-import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
+import { jsonRpcProvider } from "@wagmi/core/providers/jsonRpc"; // ✅ THIS IS THE FIX
 
 const { publicClient, webSocketPublicClient } = configureChains(
   [mainnet],
   [
     jsonRpcProvider({
       rpc: () => ({
-        http: "https://ethereum.publicnode.com", // or use your own Infura/Alchemy key
+        http: "https://ethereum.publicnode.com",
       }),
     }),
   ]

@@ -5,11 +5,17 @@ import "./index.css";
 
 import { WagmiConfig, createConfig, configureChains } from "wagmi";
 import { mainnet } from "wagmi/chains";
-import { publicProvider } from "wagmi/providers/public";
+import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
 
 const { publicClient, webSocketPublicClient } = configureChains(
   [mainnet],
-  [publicProvider()]
+  [
+    jsonRpcProvider({
+      rpc: () => ({
+        http: "https://ethereum.publicnode.com", // or use your own Infura/Alchemy key
+      }),
+    }),
+  ]
 );
 
 const config = createConfig({

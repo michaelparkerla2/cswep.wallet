@@ -12,6 +12,7 @@
     "react-dom": "^18.2.0",
     "vite": "^4.5.0",
     "ethers": "^6.7.0",
-    "wagmi": "^2.4.5"
+    "wagmi": "^2.4.5",
+    "@vitejs/plugin-react": "^4.0.0"
   }
 }

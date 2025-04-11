@@ -13,6 +13,7 @@
     "vite": "^4.5.0",
     "ethers": "^6.7.0",
     "wagmi": "^2.4.5",
-    "@vitejs/plugin-react": "^4.0.0"
+    "@vitejs/plugin-react": "^4.0.0",
+    "@wagmi/core": "^2.4.5"
   }
 }
